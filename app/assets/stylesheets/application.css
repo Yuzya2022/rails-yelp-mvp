@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ .card {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+  color: brown;
+}
+.card a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  color:brown;
+}
+div a {
+  text-decoration: none;
+  color: white;
+  display: inline;
+  text-align: center;
+}

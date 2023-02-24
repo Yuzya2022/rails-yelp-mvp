@@ -3,10 +3,11 @@
 <div class= "container" id="restaurants">
 <h1>Restaurants</h1>
   <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p>
+    <div class="card"><%= render restaurant %>
+    <p class="btn btn-success">
       <%= link_to "Show this restaurant", restaurant %>
     </p>
+    </div>
   <% end %>
-  <%= link_to "New restaurant", new_restaurant_path %>
+  <div class="btn btn-success d-flex justify-content-center text-center mb-5"><%= link_to "New restaurant", new_restaurant_path %></div>
 </div>

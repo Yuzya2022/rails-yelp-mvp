@@ -1,4 +1,4 @@
-<%= render "restaurant", restaurant: @restaurant %>
+<div class="card"><%= render "restaurant", restaurant: @restaurant %>
 
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
@@ -11,19 +11,20 @@
     <%= review.rating %>
     </li>
 
-    <%= link_to "Delete",
+    <%= link_to "Delete this review",
       review_path(review),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %>
 
   <% end %>
 </ul>
-    <%= link_to "Create new review", new_restaurant_review_path(@restaurant)  %>
+
 <br>
 
-<div>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
-
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
+<div class=" d-flex justify-content-between text-center">
+  <p class="btn btn-success"><%= link_to "Create new review", new_restaurant_review_path(@restaurant)%></p>
+  <p class="btn btn-success"><%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %></p>
+  <p class="btn btn-success"><%= link_to "Back to restaurants", restaurants_path %></p>
+  <p class="btn btn-success"><%= link_to "Destroy this restaurant", @restaurant, method: :delete %></p>
+</div>
 </div>
