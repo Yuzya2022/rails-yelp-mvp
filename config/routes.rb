@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root "restaurants#index"
-  get 'reviews/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :restaurants do
     # * Nested routes with relation to reviews -> /restaurants/:restaurants_id/new

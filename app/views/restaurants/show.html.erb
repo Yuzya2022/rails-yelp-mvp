@@ -3,15 +3,23 @@
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item">
+      <%= review.content %>
+    </li>
+    <li class="list-group-item">
+    Rating:
+    <%= review.rating %>
+    </li>
+
     <%= link_to "Delete",
       review_path(review),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
     %>
+
   <% end %>
 </ul>
+    <%= link_to "Create new review", new_restaurant_review_path(@restaurant)  %>
 <br>
-
 
 <div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
